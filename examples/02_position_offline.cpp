@@ -49,5 +49,5 @@ int main() {
     // Get some info about the position extrema of the trajectory
     std::array<Bound, 3> position_extrema;
     trajectory.get_position_extrema(position_extrema);
-    std::cout << "Position extremas for DoF 4 are " << position_extrema[2].min << " (min) to " << position_extrema[2].max << " (max)" << std::endl;
+    std::cout << "Position extremas for DoF 3 are " << position_extrema[2].min << " (min) to " << position_extrema[2].max << " (max)" << std::endl;
 }
