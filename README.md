@@ -114,7 +114,7 @@ input.intermediate_positions = {
   {0.8, ...},
 };
 ```
-As soon as at least one intermediate positions is given, the Ruckig Community Version switches to the mentioned (of course, non real-time capable) cloud API. If you require real-time calculation on your own hardware, please contact us for the *Ruckig Pro Version*.
+As soon as intermediate positions are given, the Ruckig Community Version switches to the mentioned (of course, non real-time capable) cloud API. If you require real-time calculation on your own hardware, please contact us for the *Ruckig Pro Version*.
 
 When using *intermediate positions*, both the underlying motion planning problem as well as its calculation changes significantly. In particular, there are some fundamental limitations for jerk-limited online trajectory generation regarding the usage of waypoints. Please find more information about these limitations [here](https://docs.ruckig.com/md_pages_2__intermediate__waypoints.html), and in general we recommend to use
 ```.cpp
@@ -314,14 +314,7 @@ This way, you can easily achieve the requirements above even for very high jerk 
 
 ## Benchmark
 
-We find that Ruckig is more than twice as fast as Reflexxes Type IV for state-to-state motions and well-suited for control cycles as low as 250 microseconds. The Ruckig *Community Version* is in general a more powerful and open-source alternative to the [Reflexxes Type IV](http://reflexxes.ws/) library. In fact, Ruckig is the first Type V trajectory generator for arbitrary target states and even supports directional velocity and acceleration limits, while also being faster on top.
-
-![Benchmark](https://github.com/pantor/ruckig/raw/main/doc/benchmark.png?raw=true)
-
-For trajectories with intermediate waypoints, we compare Ruckig to [Toppra](https://github.com/hungpham2511/toppra), a state-of-the-art library for robotic motion planning. Ruckig is able to improve the trajectory duration on average by around 10%, as the path planning and time parametrization are calculated jointly. Moreover, Ruckig is real-time capable and supports jerk-constraints.
-
-![Benchmark](https://github.com/pantor/ruckig/raw/main/doc/ruckig_toppra_example.png?raw=true)
-
+We report [benchmarking results in our docs](https://docs.ruckig.com/benchmark.html). To the best of our knowledge, the Ruckig Community version is the fastest trajectory or s-curve generator for state-to-state motions and is well-suited for control cycles down to 250 microseconds. The Pro version is around twice as fast, making it even better suited for short control cycles or less powerful hardware.
 
 
 ## Development
