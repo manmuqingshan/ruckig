@@ -314,7 +314,7 @@ This way, you can easily achieve the requirements above even for very high jerk 
 
 ## Benchmark
 
-We report [benchmarking results in our docs](https://docs.ruckig.com/benchmark.html). To the best of our knowledge, the Ruckig Community version is the fastest trajectory or s-curve generator for state-to-state motions and is well-suited for control cycles down to 250 microseconds. The Pro version is around twice as fast, making it even better suited for short control cycles or less powerful hardware.
+We report [benchmarking results in our docs](https://docs.ruckig.com/benchmark.html). To the best of our knowledge, the Ruckig Community version is the fastest trajectory or s-curve generator for state-to-state motions and is well-suited for control cycles down to 500 microseconds (2000 Hz). The Pro version is around twice as fast, making it even better suited for short control cycles or less powerful hardware.
 
 
 ## Development
